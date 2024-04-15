@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Geometry Genius</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar bg-base-100 shadow-lg">
+            <div class="navbar-start">
+                <div class="normal-case flex-col">
+                    <h1 class="font-bold text-5xl text-gray-700">Interactive</h1>
+                    <h1 class="font-medium text-3xl text-gray-600">Geometry Genius</h1>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <a id="blog" class="btn" href="blog.html">blog</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="my-10 px-4 md:flex justify-between mx-auto">
+            <div class="grid lg:grid-cols-3 gap-6 lg:gap-16 md:gap-8 lg:w-[65%] justify-items-center">
+                <div id="tri-card" class="card w-80 bg-base-100 shadow-2xl outline-purple-500 outline outline-2 py-4">
+                    <figure><img src="/images/triangle.png" alt="Shoes" /></figure>
+                    <div class="card-body flex flex-col">
+                        <h2 id="triangle-title" class="card-title">Triangle</h2>
+                        <h4>Area (A) = 0.5 x b x h</h4>
+                        <div class="flex flex-col md:flex-row my-4">
+                            <div class="flex gap-1">
+                                <input id="triangle-land" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="b">
+                                <p>cm</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <input id="triangle-height" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="h">
+                                <p>cm</p>
+                            </div>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button id="calculate-triangle" class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="rec-card" class="card w-80 bg-base-100 shadow-2xl outline-purple-500 outline outline-2 py-4">
+                    <figure><img class="object-fit w-[90%] h-[100%]" src="/images/rectangle.png" alt="Shoes" /></figure>
+                    <div class="card-body flex flex-col">
+                        <h2 id="retangle-title" class="card-title">Rectangle</h2>
+                        <h4>Area (A) = w x l</h4>
+                        <div class="flex flex-col md:flex-row my-4">
+                            <div class="flex gap-1">
+                                <input id="rectangle-width" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="b">
+                                <p>cm</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <input id="rectangle-height" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="h">
+                                <p>cm</p>
+                            </div>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button id="calculate-rectangle" class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="par-card" class="card w-80 bg-base-100 shadow-2xl outline-purple-500 outline outline-2 py-4">
+                    <figure><img class="object-fit w-[90%] h-[100%]" src="/images/parallelogram.png" alt="Shoes" /></figure>
+                    <div class="card-body flex flex-col">
+                        <h2 id="parallelogram-title" class="card-title">Parallelogram</h2>
+                        <h4>Area (A) = b x h</h4>
+                        <div class="flex flex-col md:flex-row my-4">
+                            <div class="flex gap-1">
+                                <input id="parallelogram-width" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="b">
+                                <p>cm</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <input id="parallelogram-height" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="h">
+                                <p>cm</p>
+                            </div>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button id="calculate-parallelogram" class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="rho-card" class="card w-80 bg-base-100 shadow-2xl outline-purple-500 outline outline-2 py-4">
+                    <figure><img class="object-fit w-[90%] h-[100%]" src="/images/rhombus.png" alt="Shoes" /></figure>
+                    <div class="card-body flex flex-col">
+                        <h2 id="rhombus-title" class="card-title">Rhombus</h2>
+                        <h4>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></h4>
+                        <div class="flex flex-col md:flex-row my-4">
+                            <div class="flex gap-1">
+                                <input id="rhombus-width" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="b">
+                                <p>cm</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <input id="rhombus-height" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="h">
+                                <p>cm</p>
+                            </div>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button id="calculate-rhombus" class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="pen-card" class="card w-80 bg-base-100 shadow-2xl outline-purple-500 outline outline-2 py-4">
+                    <figure><img class="w-[65%] h-[100%]" src="/images/pentagon.png" alt="Shoes" /></figure>
+                    <div class="card-body flex flex-col">
+                        <h2 id="pentagon-title" class="card-title">Pentagon</h2>
+                        <h4>Area (A) = 0.5 x p x b</h4>
+                        <div class="flex flex-col md:flex-row my-4">
+                            <div class="flex gap-1">
+                                <input id="pentagon-width" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="b">
+                                <p>cm</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <input id="pentagon-height" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="h">
+                                <p>cm</p>
+                            </div>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button id="calculate-pentagon" class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="ell-card" class="card w-80 bg-base-100 shadow-2xl outline-purple-500 outline outline-2 py-4">
+                    <figure><img class="object-fit w-[90%] h-[100%]" src="/images/ellipse.png" alt="Shoes" /></figure>
+                    <div class="card-body flex flex-col">
+                        <h2 id="ellipse-title" class="card-title">Ellipse</h2>
+                        <h4>Area (A) = π x a x b</h4>
+                        <div class="flex flex-col md:flex-row my-4">
+                            <div class="flex gap-1">
+                                <input id="ellipse-width" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="b">
+                                <p>cm</p>
+                            </div>
+                            <div class="flex gap-1">
+                                <input id="ellipse-height" class="w-[50%] bg-slate-200 outline-none rounded-md px-2 py-1" min="0"
+                                    type="number" placeholder="h">
+                                <p>cm</p>
+                            </div>
+                        </div>
+                        <div class="card-actions justify-end">
+                            <button id="calculate-ellipse" class="btn btn-primary">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:w-[30%] mx-auto">
+                <h1 class="text-2xl text-center font-bold underline mb-3 mt-12 md:mt-0">
+                    Area Calculation
+                </h1>
+                <h1 class="text-lg">Note: As graph based values can be negative so we will take negative inputs too. But the area will always be positive as area can not be negative.</h1>
+                <div class="overflow-x-auto">
+                    <table class="table w-full ">
+                        <tbody id="table-container">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/script/utils.js"></script>
+    <script src="/script/script.js"></script>
+</body>
+
+</html>

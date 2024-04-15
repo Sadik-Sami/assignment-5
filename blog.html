@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Genius Blogs</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar bg-base-100 shadow-lg">
+            <div class="navbar-start">
+                <div class="normal-case flex-col">
+                    <h1 class="font-bold text-5xl text-gray-700">Interactive</h1>
+                    <h1 class="font-medium text-3xl text-gray-600">Geometry Genius</h1>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <a id="blog" class="btn" href="index.html">Back</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="my-6 container mx-auto md:grid md:grid-cols-2 gap-4">
+            <div class="shadow-lg p-4">
+                <h1 class="text-4xl text-primary font-semibold">What is DOM and what is the purpose of DOM?</h1>
+                <p class="text-justify">
+                    DOM stands for Document Object Model. It's how a web browser represents a web page internally. The D
+                    stands for Document, The O stands for Object, The M stands for Model. <br>
+                    It represents the web page so that programs can change the document structure, style, and content inside of the web page dynamically.
+                    It also helps the web page to be more responsive and dynamic. Some basic cases are like adding event listeners to buttons. So that when the user uses the button something functional can happen which will be usefull to the user. <br>
+                    DOM represents the document as nodes and objects or array like objects. That way, programming languages can interact with the page. one of the most popular one is Javascript.
+                </p>
+            </div>
+            <div class="shadow-lg p-4">
+                <h1 class="text-4xl text-primary font-semibold">How will you select HTML elements using DOM? Name the DOM methods.</h1>
+                <p class="text-justify">
+                    <strong>1. </strong> document.getElementsByTagName(”Tag Name”); <br>
+                    <strong>2. </strong> document.getElementsByClassName(”Class Name”); <br>
+                    we will get all the elements with the same class name in an array like object. <br>
+                    <strong>3. </strong> document.getElementById(”Id name”); <br>
+                    as id's are unique, we will only receive one item <br>
+                    <strong>4. </strong> document.querySelector(cssSelectors/classNames); <br>
+                    we will need to use (#) for id's and (.) for classes as query selector needs CSS Selectors.<br>
+                    The querySelector() method returns the first child element that matches a specified CSS selector(s) / class names of an element. <br>
+                    <strong>5. </strong>To get all elements with class="example".
+                    querySelectorAll(".example");
+                    The querySelectorAll() method returns a collection of an element's, child elements that match a specified CSS selector(s), as a static Node List object.
+                </p>
+            </div>
+            <div class="shadow-lg p-4">
+                <h1 class="text-4xl text-primary font-semibold">What is event bubble?</h1>
+                <p class="text-justify">
+                    What is Event Bubble? Event Bubble is a thing of DOM (Document Object Model). It takes place when an element receives an order, and that order bubbles up or we can say that it is propagated to it's parent and parent's parent (ancestor) elements in the DOM tree until it gets to the root element.
+                </p>
+            </div>
+            <div class="shadow-lg p-4">
+                <h1 class="text-4xl text-primary font-semibold">What is a callback function and why will you use it?</h1>
+                <p class="text-justify">
+                    A callback function is a function passed into another function as an argument or as a parameter. which then takes place in the outer function to complete an action which is needed in the main function (the function where call back function was used). <br>
+                    When we want one function to execute only after another function has completed its work, we use callback functions. It needs to pass as a parameter to other functions to make a function callback just as I explained in the first section.
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
